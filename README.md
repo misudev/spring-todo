@@ -33,11 +33,14 @@ Maven 3.6.0
  
  
 ## 주요 기능
+
+![FireShot Capture 007 - spring-todo - 52 78 203 121](https://user-images.githubusercontent.com/45555378/58023484-def67180-7b4a-11e9-83d3-e22fdeeb7389.png)
+![todo-list-capture3](https://user-images.githubusercontent.com/45555378/58023478-d867fa00-7b4a-11e9-850a-439cbf118f91.png)
  #### 1. TODO 추가하기
-![todo-list-capture2](https://user-images.githubusercontent.com/45555378/58021882-25e26800-7b47-11e9-9346-35127e527ae3.png)
  * 'TODO 추가' 버튼을 눌러 새로운 TODO를 작성할 수 있습니다.
  * 마감기한은 오늘부터 그 이후로 선택할 수 있습니다.
  * 우선순위를 High, Medium, Low 중 선택할 수 있습니다.
+ * 우선순위를 선택하지 않으면 기본 Low값이 , 마감기한을 선택하지 않으면 기본으로 오늘 날짜로 저장됩니다.
  #### 2. TODO 수정하기
  * '수정' 버튼을 눌러 해당 TODO를 수정할 수 있습니다.
  #### 3. TODO 삭제하기
