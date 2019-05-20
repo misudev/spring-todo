@@ -34,8 +34,8 @@ Maven 3.6.0
  
 ## 주요 기능
  #### 1. TODO 추가하기
-![todo-list-capture2](https://user-images.githubusercontent.com/45555378/58021882-25e26800-7b47-11e9-9346-35127e527ae3.png)
-
+![FireShot Capture 007 - spring-todo - 52 78 203 121](https://user-images.githubusercontent.com/45555378/58023484-def67180-7b4a-11e9-83d3-e22fdeeb7389.png)
+![todo-list-capture3](https://user-images.githubusercontent.com/45555378/58023478-d867fa00-7b4a-11e9-850a-439cbf118f91.png)
 
  * 'TODO 추가' 버튼을 눌러 새로운 TODO를 작성할 수 있습니다.
  * 마감기한은 오늘부터 그 이후로 선택할 수 있습니다.
