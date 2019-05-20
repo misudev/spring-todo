@@ -1,0 +1,10 @@
+insert into task (id, title, description, priority, deadline_date) values (1, '핸드폰 요금 내기', '핸드폰 요즘 계좌이체 할 것!!', 'High', '2019-05-28 23:59:59');
+insert into task (id, title, description, priority, deadline_date) values (2, '빨래 하기', '빨래 꼭 하기', 'Low', '2019-05-30 23:59:59');
+insert into task (id, title, description, priority, deadline_date) values (3, '방청소하기', '책장 정리하기, 책상 정리하기', 'Low', '2019-05-29 23:59:59');
+insert into task (id, title, description, priority, deadline_date) values (4, '세탁소 가기', '크린토피아 드라이클리닝 맡긴 셔츠 찾기. ', 'Medium', '2019-06-01 23:59:59');
+insert into task (id, title, description, priority, created_date, deadline_date, time_over) values (5, '멜론 해지', '멜론 요금제 해지하기', 'High', '2019-05-15 23:59:59', '2019-05-18 23:59:59', 1);
+insert into task (id, title, description, priority, created_date, deadline_date, time_over) values (6, '바지 구매', '아울렛에서 바지 구매', 'High', '2019-05-15 23:59:59', '2019-05-18 23:59:59', 1);
+insert into task (id, title, description, priority, created_date, deadline_date) values (7, '체육센터 재등록', '필라테스 오전반 재등록하기', 'High', '2019-05-15 23:59:59', '2019-06-01 23:59:59');
+insert into task (id, title, description, priority, created_date, deadline_date, time_over, complete) values (8, '이력서 제출', '프로그래머스 이력서 제출하기', 'High', '2019-05-01 23:59:59', '2019-05-10 23:59:59', 1, 1);
+insert into task (id, title, description, priority, created_date, deadline_date, complete) values (9, '책 반납', '라틴어 수업 - 반납하기', 'Medium', '2019-05-14 23:59:59', '2019-05-29 23:59:59', 1);
+insert into task (id, title, description, priority, created_date, deadline_date, time_over, complete) values (10, '길동이 생일', '길동이 생일 약속 - 강남 8시', 'High', '2019-05-18 23:59:59', '2019-05-19 23:59:59',1 ,1);
