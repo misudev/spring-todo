@@ -16,7 +16,7 @@ import java.util.List;
 public class TaskCheckScheduler {
     private final TaskService taskService;
     // 00시 마다 마감 날짜 지났는지 체크
-    @Scheduled(cron= "0 0 0 * * *")
+    @Scheduled(cron= "0 0 21 * * *")
     public void checkOverTime(){
         log.info("마감기한 체크 시작!");
         List<Task> targetTasks = taskService.getTasksByTimeOver();
