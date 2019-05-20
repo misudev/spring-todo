@@ -9,6 +9,10 @@ public class ParseDate {
 
     public static Date stringToDate(String str){
         Date date = new Date();
+
+        if(str.equals(""))
+            return date;
+
         try{
             simpleDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
             date = simpleDateFormat.parse(str);
