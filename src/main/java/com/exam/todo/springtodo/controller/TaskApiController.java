@@ -2,6 +2,7 @@ package com.exam.todo.springtodo.controller;
 
 import com.exam.todo.springtodo.domain.Task;
 import com.exam.todo.springtodo.dto.IdDto;
+import com.exam.todo.springtodo.dto.OverTimeTaskDto;
 import com.exam.todo.springtodo.dto.TaskDto;
 import com.exam.todo.springtodo.service.TaskService;
 import com.exam.todo.springtodo.util.ParseDate;
@@ -13,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -83,6 +85,22 @@ public class TaskApiController {
 
         taskService.deleteTask(taskId);
         return new ResponseEntity(HttpStatus.OK);
+    }
+
+    // 마감 기한이 지났는데 완료 되지 않은 task 정보 보내기
+    @GetMapping("/overtime")
+    public ResponseEntity<OverTimeTaskDto> getOverTimeTasks(){
+        List<Task> tasks = taskService.getPastTask();
+        OverTimeTaskDto overTimeTaskDto = new OverTimeTaskDto();
+        if(tasks.size() == 0){
+            overTimeTaskDto.setCount(0);
+            return new ResponseEntity<>(overTimeTaskDto, HttpStatus.OK);
+        }
+        overTimeTaskDto.setCount(tasks.size());
+        for(Task t : tasks){
+            overTimeTaskDto.addTitle(t.getTitle());
+        }
+        return new ResponseEntity<>(overTimeTaskDto, HttpStatus.OK);
     }
 
     private Task mappingTask(TaskDto taskDto){

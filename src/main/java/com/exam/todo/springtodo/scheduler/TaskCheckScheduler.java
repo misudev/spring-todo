@@ -18,6 +18,7 @@ public class TaskCheckScheduler {
     // 00시 마다 마감 날짜 지났는지 체크
     @Scheduled(cron= "0 0 0 * * *")
     public void checkOverTime(){
+        log.info("마감기한 체크 시작!");
         List<Task> targetTasks = taskService.getTasksByTimeOver();
         Date now = new Date();
         // 오늘 날짜와 비교하여 마감 기한이 지난 경우 timeOver 값을 true로 바꿔준다.

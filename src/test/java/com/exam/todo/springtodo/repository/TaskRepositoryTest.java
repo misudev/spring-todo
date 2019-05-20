@@ -36,7 +36,6 @@ public class TaskRepositoryTest {
     public void task_가져오기() throws Exception {
         Task task = taskRepository.getTaskById(3L);
         assertEquals(task.getTitle(), "책 반납");
-        assertEquals(task.getDeadlineDate(), ParseDate.createLastDate());
     }
 
     @Test

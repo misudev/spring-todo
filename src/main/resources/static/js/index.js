@@ -255,3 +255,42 @@ $("#update-todo").click( function() {
     $('#updateModal').modal('toggle');
 });
 
+// 마감 기한이 지나고 처리하지 않은 일에 대해 알람 보내기..
+$.ajax({
+    url: '/api/tasks/overtime',
+    method: 'get',
+    async: true,
+    contentType: "application/json",
+    success: function (resp) {
+        console.log("past tasks : " + resp.count);
+        if(resp.count == 0) return;
+        var text = '';
+        for(var i = 0; i < resp.count -1; i++){
+            text = text + resp.titles[i] +', </br>';
+        }
+        text = text + resp.titles[i];
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "2000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        var text2 = '마감기한이 지났으나 완료하지 못한 TODO : ' + resp.count + '개';
+        toastr.info(text, text2);
+    },
+    error: function (err) {
+        console.log(err.toString());
+    }
+});
+
