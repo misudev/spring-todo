@@ -9,7 +9,7 @@ public class ParseDate {
 
     public static Date stringToDate(String str){
         Date date = new Date();
-
+        // 날짜를 입력하지 않은 경우.
         if(str.equals(""))
             return date;
 
