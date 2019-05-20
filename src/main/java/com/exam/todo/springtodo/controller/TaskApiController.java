@@ -6,6 +6,7 @@ import com.exam.todo.springtodo.dto.OverTimeTaskDto;
 import com.exam.todo.springtodo.dto.TaskDto;
 import com.exam.todo.springtodo.service.TaskService;
 import com.exam.todo.springtodo.util.ParseDate;
+import com.exam.todo.springtodo.util.PriorityType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -108,7 +109,11 @@ public class TaskApiController {
         task.setId(taskDto.getId());
         task.setTitle(taskDto.getTitle());
         task.setDescription(taskDto.getDescription());
-        task.setPriority(taskDto.getPriority());
+        if(taskDto.getPriority()==null){
+            task.setPriority(PriorityType.Low);
+        }else{
+            task.setPriority(taskDto.getPriority());
+        }
         task.setDeadlineDate(ParseDate.stringToDate(taskDto.getDeadlineDate()));
         return task;
     }
