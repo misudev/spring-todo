@@ -8,6 +8,7 @@ jdk 1.8
 Maven 3.6.0
 
 #### 빌드 방법 
+ > git clone https://github.com/misudev/spring-todo.git
 
 
 
