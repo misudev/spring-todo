@@ -30,4 +30,9 @@ Maven 3.6.0
  ~~~
  java -jar target/spring-todo-0.0.1-SNAPSHOT.jar
  ~~~
+ 
+ 
+## 주요 기능
+
+ ** 1. TODO 추가하기 **
 
